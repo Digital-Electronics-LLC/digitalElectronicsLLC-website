@@ -3,39 +3,8 @@
   <head>
     <title>Digital Electronics</title>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/common.css">
     <style>
-      :root{
-        /*These colors are from https://colorhunt.co/palette/ff4848ffd371c2ffd99ddac6*/
-        --color-1:#FF4848;
-        --color-2:#FFD371;
-        --color-3:#C2FFD9;
-        --color-4:#9DDAC6;
-        --black:#012443;
-      }
-      body, html{
-        padding:0;
-        margin:0;
-        width:100%;
-        height:100%;
-      }
-      body{
-        font-family:sans-serif;
-      }
-      nav{
-        background:var(--black);
-      }
-      nav > a{
-        padding:15px;
-        color:white;
-        display:inline-block;
-        text-decoration:none;
-      }
-      nav > a:not(.logo){
-        float:right;
-      }
-      nav > a:hover{
-        background:var(--color-1);
-      }
       .header{
         background:var(--black);
         background-image:url("https://raw.githubusercontent.com/Digital-Electronics-LLC/digitalElectronicsLLC-website/main/assets/signapore_city.jpg");
@@ -47,41 +16,6 @@
       }
       .header h1{
         font-size:50px;
-      }
-      .part{
-        padding:50px 30px;
-        display:flex;
-        flex-direction:row;
-        align-items:center;
-        justify-content:space-between;
-      }
-      .part h1{
-        margin:0;
-      }
-      .part img{
-        width:300px;
-      }
-      .part .stand-out{
-        color:var(--color-1);
-      }
-      a{
-        position:relative;
-        text-decoration:none;
-      }
-      a::after{
-        text-decoration: none;
-        bottom: 0;
-        content: "";
-        display: block;
-        height: 1px;
-        left: 0;
-        position: absolute;
-        background: blue;
-        transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        width: 0;
-      }
-      a:hover::after{
-        width:100%;
       }
       .footer {
          padding: 5px; /* Some padding */
