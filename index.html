@@ -64,6 +64,25 @@
       .part .stand-out{
         color:var(--color-1);
       }
+      a{
+        position:relative;
+        text-decoration:none;
+      }
+      a::after{
+        text-decoration: none;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        background: blue;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      a:hover::after{
+        width:100%;
+      }
       .footer {
          padding: 20px; /* Some padding */
          text-align: center; /* Center text*/
@@ -74,17 +93,17 @@
   <body>
     <nav>
       <a class="logo" href="https://github.com/Digital-Electronics-LLC">Digital Electronics</a>
-      <a>Link</a>
+      <a href="/projects.html">Projects</a>
     </nav>
     <div class="header">
       <h1>Digital Electronics</h1>
     </div>
     <div class="part">
       <div>
-        <h1>We make <span class="stand-out">Stuff</span></h1>
-        <span>We do</span>
+        <h1>We make <span class="stand-out">Software</span></h1>
+        <span>Go see our <a href="/projects.html">projects</a>.</span>
       </div>
-      <img src="https://www.pngitem.com/pimgs/m/2-23648_man-working-on-a-laptop-from-side-view.png">
+      <img src="https://raw.githubusercontent.com/Digital-Electronics-LLC/digitalElectronicsLLC-website/main/assets/person_and_computer.jpg">
     </div>
     <div class="footer">
       <h2>Footer</h2>
