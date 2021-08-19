@@ -1,0 +1,48 @@
+:root{
+  /*These colors are from https://colorhunt.co/palette/ff4848ffd371c2ffd99ddac6*/
+  --color-1:#FF4848;
+  --color-2:#FFD371;
+  --color-3:#C2FFD9;
+  --color-4:#9DDAC6;
+  --black:#012443;
+}
+body, html{
+  padding:0;
+  margin:0;
+  width:100%;
+  height:100%;
+}
+body{
+  font-family:sans-serif;
+}
+a{
+  position:relative;
+  text-decoration:none;
+}
+a::after{
+  text-decoration: none;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  background: blue;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover::after{
+  width:100%;
+}
+.header{
+  background:var(--black);
+  background-image:url("https://raw.githubusercontent.com/Digital-Electronics-LLC/digitalElectronicsLLC-website/main/assets/signapore_city.jpg");
+  background-position:center;
+  background-size:cover;
+  padding:100px 0;
+  text-align:center;
+  color:white;
+}
+.header h1{
+  font-size:50px;
+}
