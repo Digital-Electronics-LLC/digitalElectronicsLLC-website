@@ -10,7 +10,7 @@
         --color-2:#FFD371;
         --color-3:#C2FFD9;
         --color-4:#9DDAC6;
-        --background-1:#012443;
+        --black:#012443;
       }
       body, html{
         padding:0;
@@ -22,7 +22,7 @@
         font-family:sans-serif;
       }
       nav{
-        background:var(--background-1);
+        background:var(--black);
       }
       nav > a{
         padding:15px;
@@ -30,16 +30,48 @@
         display:inline-block;
         text-decoration:none;
       }
+      nav > a:not(.logo){
+        float:right;
+      }
       nav > a:hover{
         background:var(--color-1);
+      }
+      .header{
+        background:var(--black);
+        padding:100px 0;
+        text-align:center;
+        color:white;
+      }
+      .header h1{
+        font-size:50px;
+      }
+      .part{
+        padding:50px 30px;
+      }
+      .part h1{
+        margin:0;
+      }
+      .part img{
+        float:right;
+        width:300px;
+      }
+      .part .stand-out{
+        color:var(--color-1);
       }
     </style>
   </head>
   <body>
     <nav>
-      <a href="https://github.com/Digital-Electronics-LLC">Digital Electronics</a>
+      <a class="logo" href="https://github.com/Digital-Electronics-LLC">Digital Electronics</a>
       <a>Link</a>
     </nav>
-    <h1>Digital Electronics</h1>
+    <div class="header">
+      <h1>Digital Electronics</h1>
+    </div>
+    <div class="part">
+      <img src="https://www.pngitem.com/pimgs/m/2-23648_man-working-on-a-laptop-from-side-view.png">
+      <h1>We make <span class="stand-out">Stuff</span></h1>
+      <span>We do</span>
+    </div>
   </body>
 </html>
