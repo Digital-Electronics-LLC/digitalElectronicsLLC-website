@@ -48,15 +48,48 @@
       .header h1{
         font-size:50px;
       }
+      .part{
+        padding:50px 30px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        justify-content:space-between;
+      }
+      .part h1{
+        margin:0;
+      }
+      .part img{
+        width:300px;
+      }
+      .part .stand-out{
+        color:var(--color-1);
+      }
+      a{
+        position:relative;
+        text-decoration:none;
+      }
+      a::after{
+        text-decoration: none;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        background: blue;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      a:hover::after{
+        width:100%;
+      }
       .footer {
          padding: 20px; /* Some padding */
+         margin:0px;
          text-align: center; /* Center text*/
          background: #ddd; /* Grey background */
       }
-      .github {
-        text-align: center;
-      }
-      .main{
+      .main {
         text-align: center;
       }
     </style>
