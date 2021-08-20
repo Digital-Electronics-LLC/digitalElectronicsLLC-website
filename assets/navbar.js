@@ -5,6 +5,7 @@ nav.innerHTML = `
   <a href = "/About.html?bypass-cache=1629392725l">About</a>
   <a href= "/Join.html?bypass-cache=1629394689">Join</a>
   <a href = "/people.html?bypass-cache=1629409447">People</a>
+  <a href = "/news.html?bypass-cache=1629424011">News</a>
 `
 document.body.appendChild(nav)
 var style = document.createElement("style")
