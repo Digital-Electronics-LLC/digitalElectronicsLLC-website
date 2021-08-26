@@ -36,6 +36,7 @@
       fetch("/news.json").then(r => r.json()).then(news => {
         if(news.length === 0){
           newsEl.innerHTML = "<marquee><h3>No current news, You're all caught up!</h3></marquee>"
+          return
         }
         var html = ""
         for(var i=0; i<news.length; i++){
@@ -44,6 +45,7 @@
           html += "<p>"+n.content+"</p>"
           html += "<hr>"
         }
+        newsEl.innerHTML = html
       })
     </script>
     <div class="footer">
