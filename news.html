@@ -25,29 +25,12 @@
       <h1>Digital Electronics</h1>
     </div>
     <div class="main">
-      <div class="image"><img src="/assets/newspaper-icon.png" alt="newspaper"></div>
+      <div class="image"><img src="https://raw.githubusercontent.com/Digital-Electronics-LLC/digitalElectronicsLLC-website/main/assets/newspaper-icon.png" alt="newspaper"></div>
       Note: new news(no pun intended) will only be shown for 21 days. After<br>that, they will be deleted to prevent storage overload because I only have 100 MB.
       <hr>
-      <div id="news"></div>
+      <marquee><h3>No current news, You're all caught up!</h3></marquee>
       <br><br><br><br><br><br> 
     </div>
-    <script>
-      var newsEl = document.getElementById("news")
-      fetch("/news.json").then(r => r.json()).then(news => {
-        if(news.length === 0){
-          newsEl.innerHTML = "<marquee><h3>No current news, You're all caught up!</h3></marquee>"
-          return
-        }
-        var html = ""
-        for(var i=0; i<news.length; i++){
-          var n = news[i]
-          html += "<h1>"+n.title+"</h1>"
-          html += "<p>"+n.content+"</p>"
-          html += "<hr>"
-        }
-        newsEl.innerHTML = html
-      })
-    </script>
     <div class="footer">
       <h2>Contact Us</h2>
         <a href="https://github.com/Digital-Electronics-LLC">github</a><br>
