@@ -15,7 +15,12 @@
         text-align: center;
       }
       .image {
-        float:top;
+        float:top; /*This is invalid. Where is this even used?*/
+      }
+      .news{
+        border:1px solid black;
+        border-radius:2px;
+        margin:5px 0px;
       }
     </style>
   </head>
@@ -28,7 +33,7 @@
       <div class="image"><img src="/assets/newspaper-icon.png" alt="newspaper"/></div>
       Note: new news(no pun intended) will only be shown for 21 days. After<br/>that, they will be deleted to prevent storage overload because I only have 100 MB.
       <hr/>
-      <marquee><h3>No current news, You're all caught up!</h3></marquee>
+      <div id="news"><marquee><h3>No current news, You're all caught up!</h3></marquee></div>
       <br/><br/><br/><br/><br/><br/> 
     </div>
     <div class="footer">
@@ -36,5 +41,19 @@
         <a href="https://github.com/Digital-Electronics-LLC">github</a><br/>
         ©2021 Digital-Electronics-LLC
     </div>
+    <script>
+      var news = document.querySelector("#news")
+      fetch("/news.json").then(r => r.json()).then(function(json){
+        if(!json.length) return
+        var html = ""
+        json.forEach(x => {
+          html += "<div class='news'>"
+          html += "<h1>"+x.title+"</h1>"
+          html += x.content
+          html += "</div>"
+        })
+        news.innerHTML = html
+      })
+    </script>
   </body>
 </html>
