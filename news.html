@@ -33,7 +33,7 @@
       <div class="image"><img src="/assets/newspaper-icon.png" alt="newspaper"/></div>
       Note: new news(no pun intended) will only be shown for 21 days. After<br/>that, they will be deleted to prevent storage overload because I only have 100 MB.
       <hr/>
-      <div id="news"><div class="marquee"><p><h3>No current news, You're all caught up!</h3></p></div></div>
+      <div id="news"></div>
       <br/><br/><br/><br/><br/><br/> 
     </div>
     <div class="footer">
@@ -44,7 +44,7 @@
     <script>
       var news = document.querySelector("#news")
       fetch("/news.min.json").then(r => r.json()).then(function(json){
-        if(!json.length) return
+        if(!json.length) return news.inneHTML = `<div class="marquee"><p><h3>No current news, You're all caught up!</h3></p></div>`
         var html = ""
         json.forEach(x => {
           html += "<div class='news'>"
