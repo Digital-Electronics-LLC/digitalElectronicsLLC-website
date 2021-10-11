@@ -43,7 +43,7 @@
     </div>
     <script>
       var news = document.querySelector("#news")
-      fetch("/news.json").then(r => r.json()).then(function(json){
+      fetch("/news.min.json").then(r => r.json()).then(function(json){
         if(!json.length) return
         var html = ""
         json.forEach(x => {
